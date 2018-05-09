@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Flask intro</title>
+  </head>
+  <body>
+    <h1> C4E BLOG </h1>
+    <h5>
+      {% for post in posts %}
+      {{ post.title }}
+      <h3>
+        {{ post.content }}
+      </h3>
+      <h1>
+## jinja2 conditional expression
+        {% if post.gender== 1 %}
+        <p>(  By: Mr {{ post.content }})</p>
+        {% endif %}
+        {% if post.gender== 0 %}
+        <p>(  By: Ms {{ post.content }})</p>
+        {% endif %}
+      </h1>
+      {% endfor %}
+    </h5>
+
+{#    <!-- <h5>{{blog.title}}</h5> cũng được -->
+    <!-- <p>
+        {{post_content}}
+    </p> -->
+    <!-- <p>
+      <span style="text-decoration: underline;"><em><strong>{{blog['content']}}</strong></em></span>
+    </p>
+    <i>By: {{blog['author']}}</i> -->#}
+  </body>
+</html>
