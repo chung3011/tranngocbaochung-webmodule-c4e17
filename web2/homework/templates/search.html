@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type='image/ico' href="static/icon.ico">
+    <title>Search</title>
+  </head>
+  <body>
+<h1>Search page</h1>
+{%for customer in all_customer%}
+  <div>
+    {% if customer.gender==1 %}
+    <img src="../static/male.jpg" style="width:200px;" alt="image">
+    {% endif %}
+    {% if customer.gender==0 %}
+    <img src="../static/female.jpg" style="width:200px;" alt="image">
+    {% endif %}
+    <p>Name: {{customer.name}}</p>
+     <p>Gender: {{customer.gender}}</p>
+     <p>Email: {{customer.email}}</p>
+     <p>Phone number: {{customer.phone}}</p>
+     <p>Job: {{customer.job}}</p>
+     <p>Company: {{customer.company}}</p>
+     <p>Contacted: {{customer.contacted}}</p>
+      <hr>
+  </div>
+{%endfor%}
+  </body>
+</html>

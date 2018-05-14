@@ -1,0 +1,10 @@
+1,Không có bất kỳ id nào trùng lặp trong các bản ghi
+Vì ID (identification) dùng để nhận diện giữa các bản ghi nên không thể giống nhau
+
+2,
+Service.objects.get(id ="5a36299d9f10831aaae091e4")
+
+3,
+Service.objects.get(id="5a36299d9f10831aaae091e4").delete()
+
+# code trong app.py
