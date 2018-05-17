@@ -7,7 +7,7 @@ mlab.connect()
 
 fake = Faker()
 
-for i in range(50):
+for i in range(10):
     print(i,"....")
     g=randint(0,1)
     if g==0:

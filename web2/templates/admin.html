@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ADMIN</title>
+  </head>
+  <body>
+<h1>Admin page</h1>
+<table border="1px">
+<thead>
+  <th>No</th>
+  <th>name</th>
+  <th>yob</th>
+  <th>gender</th>
+  <th>height</th>
+  <th>phone</th>
+  <th>address</th>
+  <th>status</th>
+</thead>
+<tbody>
+  {% for service in all_service %}
+  <tr>
+    <td>{{loop.index}}</td>
+    <td>{{service.name}}</td>
+    <td>{{service.yob}}</td>
+    <td>
+      {{ "Nam" if service.gender == 1 else "Nữ" }}
+    </td>
+    <td>{{service.height}}</td>
+    <td>{{service.phone}}</td>
+    <td>{{service.address}}</td>
+    <td>
+      {% if service.status == true %}
+      Bận
+      {% elif service.status == false %}
+      Rảnh
+      {% endif %}
+    </td>
+    <td>
+      <a href="#">edit</a>
+      <a href="{{url_for('delete1',service_id=service.id)}}">delete</a>
+    </td>
+  </tr>
+  {% endfor %}
+</tbody>
+</table>
+  </body>
+</html>
