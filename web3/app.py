@@ -66,7 +66,7 @@ def update(service_id):
         height = form['height']
         phone = form['phone']
         address = form['address']
-        # status = form['status']
+        status = form['status']
         description = form['description']
         measurements = form['measurements']
         image = form['image']
@@ -77,7 +77,7 @@ def update(service_id):
                         set__height=height,
                         set__phone=phone,
                         set__address=address,
-                        # set__status=status,
+                        set__status=bool(status),
                         set__description=description,
                         set__measurements=measurements,
                         set__image=image)
