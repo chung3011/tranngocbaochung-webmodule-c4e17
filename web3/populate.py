@@ -6,7 +6,7 @@ from cFake import *
 mlab.connect()
 
 fake = Faker()
-for i in range(100):
+for i in range(200):
     print(i+1,"....")
     g=randint(0,1)
     if g==0:
@@ -26,4 +26,3 @@ for i in range(100):
                  image=i,
                  status= choice([True,False]))
     service.save()
-    

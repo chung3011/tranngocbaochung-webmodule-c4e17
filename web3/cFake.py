@@ -76,7 +76,7 @@ def description():
     return(description)
 def measurements():
     v1=randint(70,110)
-    v2=randint(58,100)
+    v2=randint(58,80)
     v3=randint(80,120)
     measurements=[v1,v2,v3]
     return(measurements)

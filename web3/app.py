@@ -10,6 +10,11 @@ mlab.connect()
 def index():
     return render_template('index.html')
 
+@app.route('/find/<g>')
+def find(g):
+    all_service = Service.objects(status=False, gender=g)
+    return render_template('service.html', all_service=all_service)
+
 @app.route("/delete_all")
 def delete_all():
     all_service = Service.objects()

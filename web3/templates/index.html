@@ -2,10 +2,13 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="icon" type='image/ico' href="../static/icon.ico">
-    <title>Mùa đông không lạnh</title>
+    <link rel="icon" type='image/ico' href="static/love.ico">
+    <title>Let's Love</title>
   </head>
-  <body>
-    <h1>Mùa đông không lạnh</h1>
+  <body background="static/blue.jpg">
+    <h1 style="text-align: center;"><span style="color: #ccffff;">Love makes two hearts one</span></h1>
+    <h3 style="text-align: center;"><span style="color: #ccffff;"><em>You are?</em></span></h3>
+    <img src="static/girl.jpg" alt="this is an image" style="width:200px; margin:20px 0 0 500px;"><a href="{{url_for('find',g=1)}}" >FIND</a>
+    <img src="static/boy.jpg" alt="this is an image" style="width:200px; margin:20px 0 0 100px;"><a href="{{url_for('find',g=0)}}" >FIND</a>
   </body>
 </html>

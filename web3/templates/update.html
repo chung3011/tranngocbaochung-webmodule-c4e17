@@ -23,16 +23,14 @@
       {% if service.gender == 1 %}
       <input type="radio" name="gender" value=1 checked> Nam
       <input type="radio" name="gender" value=0> Nữ
-      {% elif service.status == 0 %}
+      {% elif service.gender == 0 %}
       <input type="radio" name="gender" value=1> Nam
       <input type="radio" name="gender" value=0 checked> Nữ
       {% else %}
       <input type="radio" name="gender" value=1> Nam
       <input type="radio" name="gender" value=0> Nữ
       {% endif %}
-
       <br>
-
       <label>Height:</label>
       <br>
       <input type="text" name="height" value="{{ service.height }}">
