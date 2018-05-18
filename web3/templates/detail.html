@@ -19,7 +19,12 @@
         <p>Address: {{ service.address }}</p>
         <p>Description: {{ service.description }}</p>
         <p>Measurements: {{service.measurements[0]}}-{{service.measurements[1]}}-{{service.measurements[2]}} </p>
-        <p>Status: {{ service.status }}</p>
+        {% if service.status == true %}
+        <p>Status: Bận</p>
+        {% elif service.status == false %}
+        <p>Status: Rảnh</p>
+        {% endif %}
+
       </div>
   </body>
 </html>
