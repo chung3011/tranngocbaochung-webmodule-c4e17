@@ -7,9 +7,9 @@
   </head>
   <body>
 <h1>Admin page</h1>
-<a href="{{ url_for('create')}}"> <h3 style="text-align: right;">Add</h3></a>
+
 <table border="1px">
-<thead>
+<thead style="background-color:#e1e1e1;overflow:hidden" >
   <th>No</th>
   <th>Name</th>
   <th>Yob</th>
@@ -20,7 +20,8 @@
   <th>Description</th>
   <th>Measurements</th>
   <th>Status</th>
-</thead>
+  <th><a href="{{ url_for('create')}}"> <h4>Add</h4></a></th>
+  </thead>
 <tbody>
   {% for service in all_service %}
   <tr>
