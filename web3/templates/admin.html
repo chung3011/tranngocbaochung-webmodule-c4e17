@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="icon" type='image/ico' href="../static/icon.ico">
     <title>ADMIN</title>
   </head>
   <body>
@@ -15,6 +16,8 @@
   <th>height</th>
   <th>phone</th>
   <th>address</th>
+  <th>description</th>
+  <th>measurements</th>
   <th>status</th>
 </thead>
 <tbody>
@@ -29,6 +32,8 @@
     <td>{{service.height}}</td>
     <td>{{service.phone}}</td>
     <td>{{service.address}}</td>
+    <td>{{service.description}}</td>
+    <td>{{service.measurements}}</td>
     <td>
       {% if service.status == true %}
       Bận
@@ -37,12 +42,15 @@
       {% endif %}
     </td>
     <td>
-      <a href="#">edit</a>
-      <a href="{{url_for('delete1',service_id=service.id)}}">delete</a>
+      <a href="{{ url_for('update', service_id=service.id) }}">Edit</a>
+      <br>
+      <a href="{{url_for('delete',service_id=service.id)}}">Delete</a>
     </td>
   </tr>
   {% endfor %}
 </tbody>
 </table>
+<br>
+<a href="{{ url_for('create')}}"> <h3>Add</h3></a>
   </body>
 </html>

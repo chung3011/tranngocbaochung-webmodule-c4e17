@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type='image/ico' href="../static/icon.ico">
+    <title>Mùa đông không lạnh</title>
+  </head>
+  <body>
+    <h1>Update service page</h1>
+    <form method="post">
+      <label>Name:</label>
+      <br>
+      <input type="text" name="name" value="{{ service.name }}">
+      <br>
+
+      <label>Yob:</label>
+      <br>
+      <input type="text" name="yob" value="{{ service.yob }}">
+      <br>
+
+      <label>Gender:</label>
+      <br>
+      {% if service.gender == 1 %}
+      <input type="radio" name="gender" value=1 checked> Nam
+      <input type="radio" name="gender" value=0> Nữ
+      {% elif service.status == 0 %}
+      <input type="radio" name="gender" value=1> Nam
+      <input type="radio" name="gender" value=0 checked> Nữ
+      {% else %}
+      <input type="radio" name="gender" value=1> Nam
+      <input type="radio" name="gender" value=0> Nữ
+      {% endif %}
+
+      <br>
+
+      <label>Height:</label>
+      <br>
+      <input type="text" name="height" value="{{ service.height }}">
+      <br>
+
+      <label>Phone:</label>
+      <br>
+      <input type="text" name="phone" value="{{ service.phone }}">
+      <br>
+
+      <label>Address:</label>
+      <br>
+      <input type="text" name="address" value="{{ service.address }}">
+      <br>
+
+      <label>Status:</label>
+      <br>
+      {% if service.status == true %}
+      <input type="radio" name="status" value=True checked> Bận
+      <input type="radio" name="status" value=False> Rảnh
+      {% elif service.status == false %}
+      <input type="radio" name="status" value=True> Bận
+      <input type="radio" name="status" value=False checked> Rảnh
+      {% else %}
+      <input type="radio" name="status" value=True> Bận
+      <input type="radio" name="status" value=False> Rảnh
+      {% endif %}
+
+      <br>
+
+      <label>Description:</label>
+      <br>
+      <input type="text" name="description" value="{{ service.description }}">
+      <br>
+
+      <label>Measurements:</label>
+      <br>
+      <input type="text" name="measurements" value="{{ service.measurements }}">
+      <br>
+
+      <label>Image:</label>
+      <br>
+      <input type="text" name="image" value="{{ service.image }}">
+      <br>
+
+      <input type="submit" name="" value="Update">
+
+    </form>
+
+  </body>
+</html>

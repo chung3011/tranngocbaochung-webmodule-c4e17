@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type='image/ico' href="../static/icon.ico">
+    <title>Service</title>
+  </head>
+  <body>
+<h1>Service page</h1>
+{%for service in all_service%}
+  <div>
+    <p><img src={{service.image}} alt="image"></p>
+    <p>Name: {{service.name}}</p>
+    <p>YOB: {{service.yob}}</p>
+    <p>Height: {{service.height}}</p>
+    <p>
+        <a href="{{ url_for('detail', service_id=service.id) }}">Detail</a>
+    </p>
+    <hr>
+  </div>
+{%endfor%}
+  </body>
+</html>
