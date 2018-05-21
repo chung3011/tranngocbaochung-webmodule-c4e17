@@ -1,0 +1,45 @@
+/* selector{
+  property: value;
+} */
+/* tag name selector */
+/* h1{
+  color: red;
+}
+h2{
+  color: blue;
+} */
+/* id selector */
+/* #Heading-2{
+  color: green;
+  font-family: 'Indie Flower', cursive;
+  font-size: 40px;
+} */
+/* class selector */
+/* .text-right{
+  text-align: right;
+} */
+.text-red{
+  color:red;
+}
+.text-upper{
+  text-transform: uppercase;
+}
+.font-bold{
+  font-weight: bold;
+}
+.font-IndieFlower{
+  font-family: 'Indie Flower', cursive;
+}
+#background{
+  height: 700px;
+  width: 100%;
+  background-color: lightgreen;
+  background-image: url('https://www.screenaustralia.gov.au/sacms/media/samedialibrary/screenguide/titles/tid33797-mountain/tid33797-web/tid33797-mountain-001-hero.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+.lightgreen{
+  height: 300px;
+  width: 100%;
+  background-color: lightgreen;
+}
