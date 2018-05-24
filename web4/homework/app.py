@@ -6,6 +6,7 @@ from gmail import GMail, Message
 from models.service import Service
 from models.user import User
 from models.order import Order
+
 app = Flask(__name__)
 app.secret_key = "123456789"
 mlab.connect()
@@ -36,9 +37,12 @@ def detail(service_id):
 def order(service_id):
     if "loggedin-user" in session:
         service = Service.objects.with_id(service_id)
-        order = Order(service_name=service.name, service_user=session['account'], time=datetime.datetime.now(), is_accepted=False)
-        order.save()
-        return 'done'
+        if service.status==False:
+            order = Order(service_name=service.name, service_user=session['account'], time=datetime.datetime.now(), is_accepted=False)
+            order.save()
+            return 'done'
+        else:
+            return render_template('error.html')
     else:
         return redirect(url_for("login"))
 
@@ -192,8 +196,12 @@ def accept(order_id):
     if "loggedin" in session:
         order = Order.objects.with_id(order_id)
         order.update(set__is_accepted=True)
+        user = User.objects(account=order.service_user)
+        for i in user:
+            mail=i.email
         gmail = GMail('20150413@student.hust.edu.vn','chung20150413')
-        msg = Message('Test Message',to='chung.hitc97@gmail.com',text='Hello')
+        msg = Message('Test Message',to=mail,text='Hello')
+        gmail.send(msg)
         all_order = Order.objects()
         return render_template('order.html', all_order=all_order)
     else:
