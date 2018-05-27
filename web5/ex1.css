@@ -1,5 +1,6 @@
 .bg{
   background: url(static/bg.jpeg) center fixed no-repeat;
+  background-size: cover;
 }
 .bg-blue{
   background: rgb(121, 198, 242);
@@ -28,17 +29,14 @@
 .h-650{
   height: 650px;
 }
-.h-80{
-  height: 80%;
+.h-350{
+  height: 350px;
 }
-.h-50{
-  height: 50%;
+.h-200{
+  height: 210px;
 }
 .h-10{
-  height: 10%;
-}
-.h-1{
-  height: 1%;
+  height: 10px;
 }
 .h-400{
   height: 400px;
