@@ -1,0 +1,57 @@
+.bg{
+  background: url(static/bg.jpeg) center fixed no-repeat;
+}
+.bg-blue{
+  background: rgb(121, 198, 242);
+}
+.border{
+  border-radius: 12px;
+}
+.circle{
+  border-radius: 100%;
+}
+#flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#flex1{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#flex2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.h-650{
+  height: 650px;
+}
+.h-80{
+  height: 80%;
+}
+.h-50{
+  height: 50%;
+}
+.h-10{
+  height: 10%;
+}
+.h-1{
+  height: 1%;
+}
+.h-400{
+  height: 400px;
+}
+.w-90{
+  width: 90%;
+}
+.w-25{
+  width: 25%;
+}
+.w-80{
+  width: 80%;
+}
+.w-70{
+  width: 70%;
+}
