@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type='image/ico' href="../static/icon.ico">
+    <title>ADMIN</title>
+  </head>
+  <body>
+<h1>Admin page</h1>
+<a href="{{ url_for('order_list')}}">Order page</a>
+<table border="1px">
+<thead style="background-color:#e1e1e1;overflow:hidden" >
+  <th>No</th>
+  <th>Name</th>
+  <th>Yob</th>
+  <th>Gender</th>
+  <th>Height</th>
+  <th>Phone</th>
+  <th>Address</th>
+  <th>Description</th>
+  <th>Measurements</th>
+  <th>Status</th>
+  <th><a href="{{ url_for('create')}}"> <h4>Add</h4></a></th>
+  </thead>
+<tbody>
+  {% for service in all_service %}
+  <tr>
+    <td>{{loop.index}}</td>
+    <td>{{service.name}}</td>
+    <td>{{service.yob}}</td>
+    <td>
+      {{ "Nam" if service.gender == 1 else "Nữ" }}
+    </td>
+    <td>{{service.height}}</td>
+    <td>{{service.phone}}</td>
+    <td>{{service.address}}</td>
+    <td>{{service.description}}</td>
+    <td>{{service.measurements}}</td>
+    <td>
+      {% if service.status == true %}
+      Bận
+      {% elif service.status == false %}
+      Rảnh
+      {%else%}
+      None
+      {% endif %}
+    </td>
+    <td>
+      <a href="{{ url_for('update', service_id=service.id) }}">Edit</a>
+      <br>
+      <a href="{{url_for('delete',service_id=service.id)}}">Delete</a>
+    </td>
+  </tr>
+  {% endfor %}
+</tbody>
+</table>
+
+  </body>
+</html>

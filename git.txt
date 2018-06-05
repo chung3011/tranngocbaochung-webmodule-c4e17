@@ -7,3 +7,6 @@ git clone "link"
 git stage .
 git commit -m "ccc"
 git push
+
+-----------------
+git pull
